@@ -1,0 +1,125 @@
+% universal settings
+\documentclass[a4paper,12pt,oneside]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[osf]{Alegreya,AlegreyaSans,FiraMono}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+\usepackage[tracking=true, letterspace=50]{microtype}
+\usepackage[left=1.7in, right=1.7in, top=1in, bottom=1.25in]{geometry}
+\usepackage{setspace}
+\usepackage{calc}
+
+% basic global settings
+\setlength{\parindent}{0em}
+\linespread{1.15}
+\SetTracking{encoding=*,shape=sc}{50}
+\setlist[itemize]{itemsep=0em}
+
+% title format
+\makeatletter
+\def\maketitle{\noindent{
+\vspace{0.6in}
+    \begin{center}
+      {\textls[120]{\LARGE \selectfont \textsc{\sffamily \MakeLowercase \@title} \par}}%
+      \vskip 1.2em
+      \small \textls{\selectfont \textsc{\sffamily \MakeLowercase \residence}} \par
+      \vskip 0.5em
+      \small \textls{\selectfont \sffamily \MakeLowercase{\phone\ | \href{mailto:\email}{\email}\ | \href{http://\homepage}{\homepage}}}
+      \vskip 2em
+    \end{center}
+  }
+}
+\makeatother
+
+% metadata
+\title{Ramakrishnan R.\,Iyer}
+\newcommand{\residence}{202, Siri Fortune, 18\textsuperscript{th} Cross, Purnapragna Layout, Bangalore, KA 560061}
+\newcommand{\phone}{+91~886~106~5751}
+\newcommand{\email}{ram.iyer@outlook.in}
+\newcommand{\homepage}{ramiyer.me}
+
+% styling classes
+\newcommand{\organisation}[3]{\vspace{1.7em}{\large{#1 \hfill #2}} \par \vspace{0.3em} \textit{#3} \vspace{0.4em}}
+\titleformat{\section}{\sffamily \AlegreyaSansMedium \scshape \MakeLowercase}{\thesection}{}{\hrule}
+\titlespacing\section{0em}{2.25em}{-1em}
+\renewcommand{\UrlFont}{\ttfamily\footnotesize}
+
+% format links
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    urlcolor={red!50!black}
+}
+
+\pagenumbering{gobble}
+
+\begin{document}
+  \maketitle
+
+  I am a \emph{Technology Specialist}, drawn to simplifying operations. I tailor solutions, ranging from monitoring to PowerShell modules for infrastructure automation. I am also a \emph{published co-author} of a book on PowerShell.
+
+  \section*{Experience}
+
+  \organisation{Cognizant Technology Solutions}
+      {2010~--~present}
+      {Infra. Technology Specialist}
+
+  I lead the offshore Infrastructure team for a renowned paper manufacturer in the US. I cut across the infrastructure fabric for the client, including VMware, Nutanix, Exchange, \textsc{scom}, \textsc{sccm} and Citrix.
+
+  \begin{itemize}
+      \item I specialise in PowerShell; built modules, with tens of functions for backup, clean-up, auto-healing, auditing, and disaster recovery.
+      \item I have led implementations of \textsc{scom}, \textsc{sccm}, Citrix XenApp~7.15, \textsc{dmarc}, etc. Ask me about my experience with the projects.
+      \item Recently, I accepted additional responsibility in Active Directory, File Services, VMware infrastructure, and Nutanix.
+      \item I also train fellow associates on PowerShell, helping them transition to automation teams across the organisation.
+  \end{itemize}
+
+  \section*{Certifications}
+
+  \organisation{External Certifications}
+  {}
+  {Technical and Process-related}
+
+  \begin{itemize}[topsep=0em]
+      \item Implementing Microsoft Azure Infrastructure Solutions
+      \item Enabling Office 365 Services
+      \item \textsc{itil}\textsuperscript{\textregistered} 2011 Foundation Certificate in IT Service Management
+  \end{itemize}
+
+  \section*{Off-work}
+
+  \organisation{PowerShell Core for Linux Administrators Cookbook}
+  {2018}
+  {Co-author, Packt Publication}
+
+  The offer to co-author a book on two things I love, excited me. After a fruitful journey of over six months, the book, \href{https://amzn.to/2PwxR18}{PowerShell Core for Linux Administrators Cookbook}, was released in November 2018.
+
+  \organisation{Meraki Post}
+  {2015~--~present}
+  {IT Architect, Book reviewer, Podcaster (because, passion)}
+
+  A few of us friends started a book review site, \href{https:\\www.merakipost.com}{Meraki Post}. It has been a journey to better control, performance and UX, with Jekyll, GitLab~CI, \textsc{aws}~S3, CloudFront and Slack. Ask me about what I built!
+
+  \organisation{The Weekend Lab}
+  {2017~--~present}
+  {All work and no play makes~...}
+
+  \begin{itemize}[topsep=0em]
+      \item I tinker with the world-favourite Raspberry PI~3 B+, running Arch Linux (\textsc{arm}). Currently, it is our Media Server at home.
+      \item Writing is my passion, too. Links to my blogs, podcast, stories and books are available on my homepage, \url{https://ramiyer.me}.
+      \item I also built a detailed, online version of this résumé using Liquid and Jekyll Collections, available at \url{https://resume.ramiyer.me}.
+  \end{itemize}
+
+  \section*{Education}
+
+  \organisation{Birla Institute of Technology and Science, Pilani}{2017}{M.Tech (Software Engineering, Work-Integrated)}
+
+  I dipped my feet into Cloud Computing and IaaC here. 18 of our clients benefited from the \textsc{gui}-based tool for Windows administration that I built using PowerShell, for my dissertation.
+
+  \organisation{Alpha Arts and Science College, Chennai}{2010}{B.Sc (Electronics and Communications)}
+
+  During my stint here, I served as the \emph{President} of the Students’ Forum, as well as the \emph{Editor} of our departmental journal. I graduated as the \emph{Best Outgoing Student} of the batch, along with a University rank in my Majors.
+\end{document}
